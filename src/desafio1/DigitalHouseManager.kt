@@ -63,7 +63,6 @@ class DigitalHouseManager() {
         val matricula = Matricula(aluno, curso)
         curso.alunosMat.add(aluno)
         matriculas.add(matricula)
-        println("Matricula ${matricula.toString()} realizada com sucesso")
     }
 
     fun alocarProfessores(codigoCurso: Int, codigoProfessorTitular: Int, codigoProfessorAdjunto: Int) {
