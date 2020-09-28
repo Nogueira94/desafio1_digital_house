@@ -76,4 +76,15 @@ class DigitalHouseManager() {
         curso.professorAdjunto = professorAdjunto as ProfessorAdjunto
         curso.professorTitular = professorTitular as ProfessorTitular
     }
+    fun consultarCurso(codAluno: Int) : MutableList<String> {
+        val aluno = alunos.get(codAluno)
+        val cursos = mutableListOf<String>();
+        matriculas.forEach {
+            if (it.aluno == aluno){
+            cursos.add(it.curso.nome)
+            }
+        }
+        return cursos
+    }
 }
+
