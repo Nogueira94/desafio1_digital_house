@@ -1,11 +1,11 @@
 package desafio1
 
-class Curso(val codCurso: Int, val nome: String, val professorTitular: ProfessorTitular? = null, val professorAdjunto: ProfessorAdjunto? = null, val qntAlunos: Int) {
+class Curso(val codCurso: Int, val nome: String, var professorTitular: ProfessorTitular? = null, var professorAdjunto: ProfessorAdjunto? = null, var qntAlunos: Int) {
     //lateinit var alunosMat: MutableList<Aluno>;
     var alunosMat = mutableListOf<Aluno>();
 
     override fun equals(other: Any?): Boolean {
-        return if (other is Curso){
+        return if (other is Curso) {
             other.codCurso == this.codCurso
         } else false
     }
@@ -19,9 +19,15 @@ class Curso(val codCurso: Int, val nome: String, val professorTitular: Professor
     }
 
     fun excluirAluno(aluno: Aluno) {
-        if (alunosMat.count() > 0) {
+        if (alunosMat.contains(aluno)) {
             alunosMat.remove(aluno)
+        } else {
+            println("Aluno não encontrado")
         }
+    }
+
+    override fun toString(): String {
+        return "Curso $nome, codigo $codCurso. Titular = ${professorTitular?.nome}, Adjunto = ${professorAdjunto?.nome} \n"
     }
 
 }
