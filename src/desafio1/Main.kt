@@ -1,7 +1,6 @@
 package desafio1
 
 fun main() {
-
     val digitalHouse = DigitalHouseManager()
 
     digitalHouse.registrarProfessorTitular("João", "Pedro", 1, "Java")
@@ -52,16 +51,4 @@ fun main() {
     digitalHouse.matricularAluno(3, 2003)
 
     println(digitalHouse.consultarCurso(2))
-
-
-
-
-/*    val professorTitular1 = ProfessorTitular(1,"João","Pedro",especialidade = "Java")
-    val professorTitular2 = ProfessorTitular(2,"Maria","Clara",especialidade = "Kotlin")
-    val professorAdjunto1 = ProfessorAdjunto(3,"Marcio","Antonio",hrsMonitoria = 12)
-    val professorAdjunto2 = ProfessorAdjunto(4,"Joana","Santos",hrsMonitoria = 13)
-
-    var cursoFullStack = Curso(20001,"Full Stack",qntAlunos = 3)
-    var crusoAndroid = Curso(20002,"Android",qntAlunos = 2)
-    */
 }
