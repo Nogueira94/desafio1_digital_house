@@ -51,6 +51,10 @@ fun main() {
 
     digitalHouse.matricularAluno(3, 2003)
 
+    println(digitalHouse.consultarCurso(2))
+
+
+
 
 /*    val professorTitular1 = ProfessorTitular(1,"João","Pedro",especialidade = "Java")
     val professorTitular2 = ProfessorTitular(2,"Maria","Clara",especialidade = "Kotlin")
